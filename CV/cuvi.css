@@ -89,35 +89,44 @@ h2 {
     margin-right: 10px;
 }
 
-.proyectos-boton {
+.proyectos-boton,
+.descarga-boton {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-top: 20px;
 }
 
-button {
+.btn-proyectos,
+.btn-descargar,
+.btn-videocurriculum {
     background-color: #0E1A40;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 8px 15px; /* Reducido el tamaño del botón */
+    font-size: 0.9em; /* Reducido el tamaño de la fuente */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-button a {
+.btn-proyectos a,
+.btn-descargar a,
+.btn-videocurriculum a {
     text-decoration: none;
     color: white;
 }
 
-button:hover {
+.btn-proyectos:hover,
+.btn-descargar:hover,
+.btn-videocurriculum:hover {
     background-color: #4D8EBC;
     transform: scale(1.05);
 }
 
-button:active {
+.btn-proyectos:active,
+.btn-descargar:active,
+.btn-videocurriculum:active {
     transform: scale(0.95);
 }
 
