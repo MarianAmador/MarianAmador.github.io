@@ -6,6 +6,24 @@
     <title>CV - Marian Adamari Amador Leyva</title>
     <link rel="icon" href="imagenes/reanudar.png" type="image/png">
     <link rel="stylesheet" href="cuvi.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById('download').onclick = function() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                const content = document.querySelector('.hoja').innerHTML;
+
+                doc.html(content, {
+                    callback: function (doc) {
+                        doc.save('curriculum_marian.pdf');
+                    },
+                    x: 10,
+                    y: 10
+                });
+            };
+        };
+    </script>
 </head>
 <body>
 
@@ -30,26 +48,19 @@
                 <p><img src="imagenes/github.png" alt="GitHub" class="icono"><a href="https://github.com/MarianAmador">MarianAmador</a></p>
                 <p><img src="imagenes/linkedin.png" alt="LinkedIn" class="icono"><a href="https://www.linkedin.com/in/marian-adamari-amador-leyva-806779332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Marian Adamari Amador Leyva</a></p>
             </div>
-            <br>
             
             <hr class="linea-divisoria"> 
             <h2>IDIOMAS</h2>
             <p><strong>Español:</strong> Nativo</p>
             <p><strong>Inglés:</strong> Intermedio</p>
-            <br>
+    
             <hr class="linea-divisoria"> 
             
             <h2>PASATIEMPOS</h2>
             <p><img src="imagenes/libro-abierto (2).png"> Leer</p> 
             <p><img src="imagenes/contrato.png"> Escribir</p> 
-            <p><img src="imagenes/audifonos-inalambricos.png"> Escuchar música</p> 
-            <br>
-            <hr class="linea-divisoria">
-             
-            <h2>EXTRA</h2>
-            <p><img src="imagenes/pdf.png"> Descargar en PDF</p> 
-            <p><img src="imagenes/youtube.png"> Videocurrículum</p>
-        </div>
+            
+           </div>
 
         <div class="parte derecha">
             <h2>WORDAGE</h2>
@@ -60,8 +71,6 @@
             asegurándome de que el documento contuviera todos los elementos que caracterizan la documentación, 
             desde el inicio del programa hasta su finalización.</p>
             
-            <br>
-
             <hr class="linea-divisoria"> 
             <h2>AGENDA 3AM</h2>
             <h3>Noviembre 2022</h3>
@@ -69,8 +78,6 @@
             Dicha agenda fue elaborada para solucionar un problema de registro y control de información sobre contactos. 
             En este proyecto, ayudé en la elaboración de la documentación. 
             Me aseguré de que el documento sobre esta agenda contara con los requisitos necesarios.</p>
-            
-            <br>
 
             <hr class="linea-divisoria"> 
             <h2>BLOG PERSONAL</h2>
@@ -80,20 +87,21 @@
             Al colocar el cursor sobre una tarjeta, se revelaba una foto y, al hacer clic, 
             te redirige a la historia seleccionada. 
             La finalidad del blog es tener un lugar donde estén organizadas las historias.</p>
-            <br>
+      
             <hr class="linea-divisoria"> 
             <h2>REGALO ESPECIAL</h2>
             <h3>Marzo 2024</h3>
             <p class="justificado">Este proyecto personal fue realizado completamente con HTML y CSS. 
             Realicé este blog para regalarselo a mi hermana, haciendo una pagina con sus famosos favoritos. 
-            Cada imagen contaba con su canción favorita y además, ciertas fotos te redirigen a las anc.</p>
+            Cada imagen contaba con su canción favorita y además, ciertas fotos te redirigen a las canciones.</p>
 
-            <div class="habilidades">
+            <div class="proyectos">
                 <div class="proyectos-boton">
-                    <button class="btn-habilidades">
-                        <a href="../index.html">Habilidades</a>
+                    <button class="btn-proyectos">
+                        <a href="index.html">Ver Habilidades</a>
                     </button>
                 </div>
+                
             </div>
         </div>
     </div>
